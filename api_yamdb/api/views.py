@@ -1,29 +1,22 @@
-from django.shortcuts import get_object_or_404
+from django.contrib.auth import authenticate, get_user_model
 from django.core.mail import send_mail
-from rest_framework import status, viewsets, views, filters
-from rest_framework.response import Response
-from rest_framework.decorators import action
-from django.contrib.auth import authenticate
-from django.contrib.auth import get_user_model
-from rest_framework_simplejwt.tokens import RefreshToken
+from django.shortcuts import get_object_or_404
 from django_filters import rest_framework as d_filters
+from rest_framework import filters, status, views, viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Review, Title
 
-from reviews.models import Review, Title, Category, Genre
-from .paginator import DefaultPagination
-from .permissions import (AuthorAndStaffOrReadOnly,
-                          IsAdminOrReadOnly,
-                          IsOwners,
-                          IsAdmin)
-from .serializers import (CommentsSerializer,
-                          ReviewsSerializer,
-                          TitleSerializer,
-                          TitlePostSerializer,
-                          CategorySerializer,
-                          GenreSerializer,
-                          UserCreateSerializer,
-                          MyTokenObtainSerializer,
-                          UserSerializer)
 from .mixins import ReadOrCreateOrDeleteViewSet
+from .paginator import DefaultPagination
+from .permissions import (AuthorAndStaffOrReadOnly, IsAdmin, IsAdminOrReadOnly,
+                          IsOwners)
+from .serializers import (CategorySerializer, CommentsSerializer,
+                          GenreSerializer, MyTokenObtainSerializer,
+                          ReviewsSerializer, TitlePostSerializer,
+                          TitleSerializer, UserCreateSerializer,
+                          UserSerializer)
 
 User = get_user_model()
 

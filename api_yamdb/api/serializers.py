@@ -1,17 +1,9 @@
-from django.utils.timezone import now
 from django.contrib.auth import get_user_model
+from django.db.models import Avg
+from django.utils.timezone import now
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
-from django.db.models import Avg
-
-from reviews.models import (
-    Title,
-    Category,
-    Genre,
-    Comment,
-    Review,
-    GenreTitle,
-)
+from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 
 User = get_user_model()
 
