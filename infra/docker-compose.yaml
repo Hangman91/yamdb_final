@@ -10,7 +10,6 @@ services:
     ports:
       - "5432:5432"
 
-
   web:
     image: astalavista91/api_yamdb:latest
     restart: always
