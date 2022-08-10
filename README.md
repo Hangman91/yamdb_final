@@ -3,6 +3,11 @@ yamdb_final
 
 ![Main workflow](https://github.com/Hangman91/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+Проект на боевом находится по адресу:
+http://51.250.100.192/
+
+Админка: 
+http://51.250.100.192/admin/
 
 # api_yamdb
 ### Описание проекта:
@@ -22,7 +27,6 @@ Python3, Django, Django REST framework, Nginx, Docker
 127.0.0.1:8000/redoc/
 ```
 
-При запуске на боевом сами понимаете, что делать, какой ендпоинт прописывать.
 
 
 ## Как запустить проект локально:
@@ -58,3 +62,27 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+
+## Как развернуть проект через докер:
+
+1. Готовим сервер:
+Останавливаем службу nginx:
+sudo systemctl stop nginx 
+
+2. Устанавливаем docker:
+sudo apt install docker.io 
+
+3. Устанавливаем docker-compose:
+https://docs.docker.com/compose/install/
+
+4. Копируем файлы docker-compose.yaml и nginx/default.conf на сервер в home/<ваш_username>/docker-compose.yaml и home/<ваш_username>/nginx/default.conf соответственно.
+
+
+## Немного об авторе:
+Александр, 30 лет, Санкт-Петербург.
+
+Защитил  кандидатскую, работаю в Горном университете. 
+Занимаюсь приёмом абитуриентов, профориентацией, проведением олимпиад. 
+По совместительству преподаватель кафедры Метрологии.
+
+Привет, ревьюер =)
