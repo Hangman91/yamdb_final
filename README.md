@@ -28,7 +28,6 @@ Python3, Django, Django REST framework, Nginx, Docker
 ```
 
 
-
 ## Как запустить проект локально:
 
 Cоздать и активировать виртуальное окружение:
