@@ -21,7 +21,7 @@ Python3, Django, Django REST framework, Nginx, Docker
 
 ### Документация
 
-Всю документацию можно найти локально по ссылке:
+Всю документацию, примеры эндпоинтов и инструкцию по составлению запросов можно найти локально по ссылке:
 
 ```
 127.0.0.1:8000/redoc/
@@ -75,6 +75,19 @@ sudo apt install docker.io
 https://docs.docker.com/compose/install/
 
 4. Копируем файлы docker-compose.yaml и nginx/default.conf на сервер в home/<ваш_username>/docker-compose.yaml и home/<ваш_username>/nginx/default.conf соответственно.
+
+5. Клонируем проект:
+git@github.com:Hangman91/yamdb_final.git
+
+6. Разворачиваем проект: 
+docker-compose up -d
+
+7. Создаём суперюзера
+docker-compose exec web python manage.py createsuperuser
+
+8. Импортируем базу данных
+docker-compose exec web python manage.py dumpdata > дамп_бд.json
+
 
 
 ## Немного об авторе:
