@@ -82,11 +82,17 @@ git@github.com:Hangman91/yamdb_final.git
 6. Разворачиваем проект: 
 docker-compose up -d
 
+7. Накатываем миграции
+docker-compose exec web python manage.py migrate
+
 7. Создаём суперюзера
 docker-compose exec web python manage.py createsuperuser
 
-8. Импортируем базу данных
-docker-compose exec web python manage.py dumpdata > дамп_бд.json
+8. Собираем статику
+docker-compose exec web python manage.py collectstatic --no-input 
+
+9. Импортируем базу данных
+docker-compose exec web python manage.py dumpdata < дамп_бд.json
 
 
 
