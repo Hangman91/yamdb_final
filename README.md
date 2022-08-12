@@ -92,8 +92,7 @@ docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input 
 
 9. Импортируем базу данных
-docker-compose exec web python manage.py dumpdata < дамп_бд.json
-
+docker-compose exec web python manage.py loaddata дамп_бд.json
 
 
 ## Немного об авторе:
