@@ -3,11 +3,6 @@ yamdb_final
 
 ![Main workflow](https://github.com/Hangman91/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-Проект на боевом находится по адресу:
-http://51.250.100.192/
-
-Админка: 
-http://51.250.100.192/admin/
 
 # api_yamdb
 ### Описание проекта:
