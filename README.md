@@ -1,8 +1,7 @@
 # yamdb_final
 yamdb_final
 
-![Main workflow](https://github.com/Hangman91/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
-
+*Учебный проект*
 
 # api_yamdb
 ### Описание проекта:
